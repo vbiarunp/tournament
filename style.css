@@ -1,0 +1,22 @@
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #272932;
+}
+.mainContainer{
+	position: absolute;
+	top: 5%;
+	width: 93%;
+	left: 7%;
+	right: 7%;
+	bottom: 10%;
+}
+.teamtext{
+	fill: white;
+	font-size: 14px;
+}
+.teamNumber{
+	fill: white;
+	font-size: 14px;	
+}
