@@ -1,23 +1,38 @@
 body{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	background-color: #272932;
-	font-family: sans-serif;
+	background: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center; 
+	 background-size:cover;
 }
-.mainContainer{
+
+.node {
+	cursor: pointer;
+}
+
+.node circle {
+	fill: #fff;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
+
+.node text {
+	font: 10px sans-serif;
+	text-align: left;
+	fill: white;
+}
+
+.link {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}
+
+body ul{
 	position: absolute;
-	top: 5%;
-	width: 93%;
-	left: 7%;
-	right: 7%;
-	bottom: 10%;
+    top: 40px;
 }
-.teamtext{
-	fill: white;
+
+body li{
 	font-size: 14px;
-}
-.teamNumber{
-	fill: white;
-	font-size: 14px;	
+	margin: 20px 0;
 }
