@@ -243,4 +243,7 @@ $(document).ready(function() {
       update(d);
     }
 
+    $(window).resize(function(){
+        update(root)
+    })
 });
