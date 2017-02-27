@@ -6,64 +6,78 @@ $(document).ready(function() {
         "parent": "null",
         "children": [
           {
-            "name": "Knockout 1",
+            "name": "Finalist 1",
             "parent": "Winner",
             "children": [
               {
-                "name": "Trigo Masters",
-                "parent": "Knockout 1"
+                "name": "Knockout 1",
+                "parent": "Finalist 1",
+                "children": [
+                  {
+                    "name": "Trigo Masters",
+                    "parent": "Knockout 1"
+                  },
+                  {
+                    "name": "Anonymous",
+                    "parent": "Knockout 1"
+                  }
+                ]
               },
               {
-                "name": "Anonymers",
-                "parent": "Knockout 1"
+                "name": "Knockout 2",
+                "parent": "Finalist 1",
+                "children": [
+                  {
+                    "name": "Rookie Masters",
+                    "parent": "Knockout 2"
+                  },
+                  {
+                    "name": "Knockout Knights",
+                    "parent": "Knockout 2"
+                  }
+                ]
               }
             ]
-          },
-          {
-            "name": "Knockout 2",
+          },{
+            "name": "Finalist 2",
+            "parent": "Winner",
+            "children": [
+                {
+                "name": "Knockout 3",
+                "parent": "Finalist 2",
+                "children": [
+                  {
+                    "name": "Fluke Aimers",
+                    "parent": "Knockout 3"
+                  },
+                  {
+                    "name": "Save Neduvaasal",
+                    "parent": "Knockout 3"
+                  }
+                ]
+              },
+              {
+                "name": "Knockout 4",
+                "parent": "Finalist 2",
+                "children": [
+                  {
+                    "name": "Kungfu Pandas",
+                    "parent": "Knockout 4"
+                  },
+                  {
+                    "name": "Trichy Thunders",
+                    "parent": "Knockout 4"
+                  }
+                ]
+              }
+            ]
+          },{
+            "name": "Finalist 3",
             "parent": "Winner",
             "children": [
               {
-                "name": "Rookie Maters",
-                "parent": "Knockout 2"
-              },
-              {
-                "name": "Knockout Knights",
-                "parent": "Knockout 2"
-              }
-            ]
-          },
-          {
-            "name": "Knockout 3",
-            "parent": "Winner",
-            "children": [
-              {
-                "name": "Fluke Aimers",
-                "parent": "Knockout 3"
-              },
-              {
-                "name": "Save Neduvaasal",
-                "parent": "Knockout 3"
-              }
-            ]
-          },
-          {
-            "name": "Knockout 4",
-            "parent": "Winner",
-            "children": [
-              {
-                "name": "Kungfu Pandas",
-                "parent": "Knockout 4"
-              },
-              {
-                "name": "Trichy Thunders",
-                "parent": "Knockout 4"
-              }
-            ]
-          },
-          {
             "name": "Knockout 5",
-            "parent": "Winner",
+            "parent": "Finalist 3",
             "children": [
               {
                 "name": "Aiyayo ivangala",
@@ -77,7 +91,7 @@ $(document).ready(function() {
           },
           {
             "name": "Knockout 6",
-            "parent": "Winner",
+            "parent": "Finalist 3",
             "children": [
               {
                 "name": "Timon & Pumba",
@@ -89,12 +103,14 @@ $(document).ready(function() {
               }
             ]
           }
+            ]
+          }
         ]
       }
     ];
 
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-      width = 900,
+      width = 1000,
       height = window.innerHeight - 30;
       
     var i = 0,
@@ -118,15 +134,17 @@ $(document).ready(function() {
     *  Append the svg into the body of the container
     */
     var svg = d3.select("body").append("svg")
-      .attr("width", 1200)
+      .attr("width", width)
       .attr("height", height)
       .style({
         'display': 'block',
-        'margin': 'auto'
+        'margin': 'auto',
+        'margin-left': '200px',
+        'padding-right': '50px'
       })
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
       .append("g");
-      // 
+      
 
     root = metaData[0];
     root.x0 = height / 2;
@@ -146,7 +164,7 @@ $(document).ready(function() {
         * creating the position y for the node
       */     
         nodes.forEach(function(d){
-            d.y = width - (d.depth * 250); 
+            d.y = width - (d.depth * 190); 
         });
 
       // Update the nodes…
@@ -168,7 +186,7 @@ $(document).ready(function() {
                 .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
         nodeEnter.append("text")
-                .attr("x", function(d) { return d.children || d._children ? 20 : -100; })
+                .attr("x", function(d) { return d.children || d._children ? 20 : -140; })
                 .attr("dy", function(d) { return d.children || d._children ? -15 : ".35em"; })
                 .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
                 .text(function(d) { return d.name; })
