@@ -46,3 +46,6 @@ body li{
 	font-family: sans-serif;
 	margin-left: -20px;
 }
+.lost{
+	background-color: red;
+}

@@ -10,16 +10,19 @@ $(document).ready(function() {
             "parent": "Winner",
             "children": [
               {
-                "name": "Knockout 1",
+                "name": "Anonymous",
+                "status": "win",
                 "parent": "Finalist 1",
                 "children": [
                   {
                     "name": "Trigo Masters",
-                    "parent": "Knockout 1"
+                    "parent": "Anonymous",
+                    "status": "lost"
                   },
                   {
                     "name": "Anonymous",
-                    "parent": "Knockout 1"
+                    "parent": "Anonymous",
+                    "status": "win"
                   }
                 ]
               },
@@ -57,16 +60,19 @@ $(document).ready(function() {
                 ]
               },
               {
-                "name": "Knockout 4",
+                "name": "Trichy Thunders",
                 "parent": "Finalist 2",
+                "status": "win",
                 "children": [
                   {
                     "name": "Kungfu Pandas",
-                    "parent": "Knockout 4"
+                    "parent": "Trichy Thunders",
+                    "status": "lost"
                   },
                   {
                     "name": "Trichy Thunders",
-                    "parent": "Knockout 4"
+                    "parent": "Trichy Thunders",
+                    "status": "win"
                   }
                 ]
               }
@@ -76,16 +82,19 @@ $(document).ready(function() {
             "parent": "Winner",
             "children": [
               {
-            "name": "Knockout 5",
+            "name": "Aiyayo ivangala",
+            "status": "win",
             "parent": "Finalist 3",
             "children": [
               {
                 "name": "Aiyayo ivangala",
-                "parent": "Knockout 5"
+                "parent": "Aiyayo ivangala",
+                "status": "win"
               },
               {
                 "name": "Shooting Stars",
-                "parent": "Knockout 5"
+                "parent": "Aiyayo ivangala",
+                "status": "lost"
               }
             ]
           },
@@ -190,6 +199,13 @@ $(document).ready(function() {
                 .attr("dy", function(d) { return d.children || d._children ? -15 : ".35em"; })
                 .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
                 .text(function(d) { return d.name; })
+                .style("fill", function(d){
+                  if(d.status == 'lost'){
+                    return 'red';
+                  }else if(d.status == 'win'){
+                    return '#2ECC71'
+                  }
+                })
                 .style("fill-opacity", radius);
 
       // Transition nodes to their new position.
