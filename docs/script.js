@@ -27,16 +27,19 @@ $(document).ready(function() {
                 ]
               },
               {
-                "name": "Knockout 2",
+                "name": "Knockout Knights",
+                "status": "win",
                 "parent": "Finalist 1",
                 "children": [
                   {
                     "name": "Rookie Masters",
-                    "parent": "Knockout 2"
+                    "parent": "Knockout Knights",
+                    "status": "lost"
                   },
                   {
                     "name": "Knockout Knights",
-                    "parent": "Knockout 2"
+                    "parent": "Knockout Knights",
+                    "status": "win"
                   }
                 ]
               }
@@ -46,16 +49,19 @@ $(document).ready(function() {
             "parent": "Winner",
             "children": [
                 {
-                "name": "Knockout 3",
+                "name": "Fluke Aimers",
+                "status": "win",
                 "parent": "Finalist 2",
                 "children": [
                   {
                     "name": "Fluke Aimers",
-                    "parent": "Knockout 3"
+                    "status": "win",
+                    "parent": "Fluke Aimers"
                   },
                   {
                     "name": "Save Neduvaasal",
-                    "parent": "Knockout 3"
+                    "parent": "Fluke Aimers",
+                    "status": "lost"
                   }
                 ]
               },
@@ -99,16 +105,19 @@ $(document).ready(function() {
             ]
           },
           {
-            "name": "Knockout 6",
+            "name": "Kabalis",
+            "status": "win",
             "parent": "Finalist 3",
             "children": [
               {
                 "name": "Timon & Pumba",
-                "parent": "Knockout 6"
+                "status": "lost",
+                "parent": "Kabalis"
               },
               {
                 "name": "Kabalis",
-                "parent": "Knockout 6"
+                "status": "win",
+                "parent": "Kabalis"
               }
             ]
           }
