@@ -6,13 +6,14 @@ $(document).ready(function() {
         "parent": "null",
         "children": [
           {
-            "name": "Finalist 1",
+            "name": "Knockout Knights",
+            "status": "win",
             "parent": "Winner",
             "children": [
               {
                 "name": "Anonymous",
-                "status": "win",
-                "parent": "Finalist 1",
+                "status": "lost",
+                "parent": "Knockout Knights",
                 "children": [
                   {
                     "name": "Trigo Masters",
@@ -29,7 +30,7 @@ $(document).ready(function() {
               {
                 "name": "Knockout Knights",
                 "status": "win",
-                "parent": "Finalist 1",
+                "parent": "Knockout Knights",
                 "children": [
                   {
                     "name": "Rookie Masters",
@@ -45,13 +46,14 @@ $(document).ready(function() {
               }
             ]
           },{
-            "name": "Finalist 2",
+            "name": "Fluke Aimers",
+            "status": "win",
             "parent": "Winner",
             "children": [
                 {
                 "name": "Fluke Aimers",
                 "status": "win",
-                "parent": "Finalist 2",
+                "parent": "Fluke Aimers",
                 "children": [
                   {
                     "name": "Fluke Aimers",
@@ -67,8 +69,8 @@ $(document).ready(function() {
               },
               {
                 "name": "Trichy Thunders",
-                "parent": "Finalist 2",
-                "status": "win",
+                "parent": "Fluke Aimers",
+                "status": "lost",
                 "children": [
                   {
                     "name": "Kungfu Pandas",
@@ -84,13 +86,14 @@ $(document).ready(function() {
               }
             ]
           },{
-            "name": "Finalist 3",
+            "name": "Aiyayo ivangala",
+            "status": "win",
             "parent": "Winner",
             "children": [
               {
             "name": "Aiyayo ivangala",
             "status": "win",
-            "parent": "Finalist 3",
+            "parent": "Aiyayo ivangala",
             "children": [
               {
                 "name": "Aiyayo ivangala",
@@ -106,8 +109,8 @@ $(document).ready(function() {
           },
           {
             "name": "Kabalis",
-            "status": "win",
-            "parent": "Finalist 3",
+            "status": "lost",
+            "parent": "Aiyayo ivangala",
             "children": [
               {
                 "name": "Timon & Pumba",
